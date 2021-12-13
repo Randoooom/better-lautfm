@@ -23,10 +23,9 @@
  * SOFTWARE.
  */
 
-import axiosInstance from './axiosInstance'
-import station from '../station/Station'
-
-export default {
-  axiosInstance,
-  station
+module.exports = {
+  presets: [
+    ['@babel/preset-env', { targets: { node: 'current' } }],
+    '@babel/preset-typescript'
+  ]
 }

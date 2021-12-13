@@ -26,7 +26,7 @@
 import axiosInstance from '../core/axiosInstance'
 import { Playlist } from './Playlist'
 
-export default class Station {
+export class Station {
   // internal name of the station
   name: string
   // the display name of the station
@@ -58,7 +58,7 @@ export default class Station {
    * @param name {string} name of the station
    */
 
-  public constructor(name: string) {
+  constructor(name: string) {
     this.name = name
   }
 

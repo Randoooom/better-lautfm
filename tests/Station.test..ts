@@ -23,4 +23,25 @@
  * SOFTWARE.
  */
 
-export { Station } from './station/Station'
+import { Station } from '../lib'
+
+let station: Station
+
+describe('Init Station', () => {
+  it('Should create an new instance', () => {
+    station = new Station('bravefm')
+
+    expect(station).toBeInstanceOf(Station)
+    expect(station.name).toEqual('bravefm')
+  })
+
+  it('Should fetch the whole station', async () => {
+    return await station.fetch().then((data) => {
+      expect(data).toBeTruthy()
+      expect(data).toHaveProperty('displayName')
+      expect(data.displayName).toEqual('Brave FM')
+      expect(data.streamUrl).toEqual('https://bravefm.stream.laut.fm/bravefm')
+      expect(data.pageUrl).toEqual('https://laut.fm/bravefm')
+    })
+  })
+})
