@@ -23,6 +23,10 @@
  * SOFTWARE.
  */
 
-import LautFM from './core/LautFM'
+import axiosInstance from './axiosInstance'
+import station from '../station/Station'
 
-export default LautFM
+export default {
+  axiosInstance,
+  station
+}

@@ -23,6 +23,16 @@
  * SOFTWARE.
  */
 
-import LautFM from './core/LautFM'
+import axios from 'axios'
 
-export default LautFM
+// create global instance with baseurl
+const axiosInstance = axios.create({ baseURL: 'https://api.laut.fm', timeout: 1000 })
+
+// setup global error handler
+axiosInstance.interceptors.response.use((response) => response, (error) => {
+  console.log('Error while requesting from lautFM')
+  throw error
+})
+
+// export instance as default
+export default axiosInstance
