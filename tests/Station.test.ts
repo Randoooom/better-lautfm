@@ -39,9 +39,9 @@ describe('Init Station', () => {
     return await station.fetch().then((data) => {
       expect(data).toBeTruthy()
       expect(data).toHaveProperty('displayName')
-      expect(data.displayName).toEqual('Brave FM')
-      expect(data.streamUrl).toEqual('https://bravefm.stream.laut.fm/bravefm')
-      expect(data.pageUrl).toEqual('https://laut.fm/bravefm')
+      expect(data?.displayName).toEqual('Brave FM')
+      expect(data?.streamUrl).toEqual('https://bravefm.stream.laut.fm/bravefm')
+      expect(data?.pageUrl).toEqual('https://laut.fm/bravefm')
     })
   })
 })
