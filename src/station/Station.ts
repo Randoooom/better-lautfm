@@ -24,7 +24,8 @@
  */
 
 import axiosInstance from '../core/axiosInstance'
-import { Playlist } from './Playlist'
+import { Playlist, Track } from './interface'
+import { parseJSON } from '../core/JSONUtil'
 
 export class Station {
   // internal name of the station
@@ -86,8 +87,8 @@ export class Station {
         this.position = response.data['position']
         this.genres = response.data['genres']
 
-        this.currentPlaylist = new Playlist(response.data['current_playlist'])
-        this.nextPlaylist = new Playlist(response.data['next_playlist'])
+        this.currentPlaylist = <Playlist>parseJSON(response.data['current_playlist'])
+        this.nextPlaylist = <Playlist>parseJSON(response.data['next_playlist'])
 
         return this
       })
@@ -115,5 +116,19 @@ export class Station {
 
   public get streamUrl(): string {
     return `https://${this.name}.stream.laut.fm/${this.name}`
+  }
+
+  /**
+   * get station history
+   */
+
+  public async getHistory(): Promise<Track[]> {
+    // fetch data
+    return await axiosInstance.get(`/station/${this.name}/last_songs`)
+      // handle response
+      .then(response => {
+        // parse all to tracks
+        return response.data.map((track: Record<string, unknown>) => <Track>parseJSON(track))
+      })
   }
 }

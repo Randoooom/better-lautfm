@@ -23,35 +23,34 @@
  * SOFTWARE.
  */
 
-export class Playlist {
-  id: number
-  name: string
-  day: string
-  hour: number
-  endTime: number
-  description: string
-  color: string
-  length: number
-  shuffled: boolean
-  startsAt: Date
-  endsAt: Date
+export interface StringIndex {
+  [key: string | number]: unknown
+}
 
-  /**
-   * constructor for the class
-   * @param data {Object} lautFM response for playlist
-   */
+export const parseJSON = (source: Record<string, unknown>) => {
+  // index new object
+  const value: StringIndex = {}
 
-  constructor(data: Record<string, unknown>) {
-    this.id = data.id as number
-    this.name = data.name as string
-    this.day = data.day as string
-    this.hour = data.hour as number
-    this.endTime = data['end_time'] as number
-    this.description = data.description as string
-    this.color = data.color as string
-    this.length = data.length as number
-    this.shuffled = data.shuffled as boolean
-    this.startsAt = new Date(data['starts_at'] as string)
-    this.endsAt = new Date(data['ends_at'] as string)
-  }
+  // iterate through all source keys
+  Object.keys(source).forEach(key => {
+    // replace keys
+    const replaced =  key.split('_').map((segment, index) => {
+      // skip first
+      if (index === 0) return segment
+      // apply lowerCamelCase
+      return `${segment.charAt(0).toUpperCase()}${segment.substring(1)}`
+      // join all
+    }).join('')
+
+    // recursive
+    if(typeof source[key] === 'object' && source[key] !== null)
+      source[key] = parseJSON(<Record<string, unknown>>source[key])
+
+    // set value
+    value[replaced] = source[key]
+  })
+
+
+
+  return <unknown>value
 }

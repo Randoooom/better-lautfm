@@ -23,33 +23,39 @@
  * SOFTWARE.
  */
 
-import { Station } from '../lib'
+export interface Playlist {
+  id: number
+  name: string
+  day: string
+  hour: number
+  endTime: number
+  description: string
+  color: string
+  length: number
+  shuffled: boolean
+  startsAt: Date
+  endsAt: Date
+}
 
-let station: Station
+export interface Artist {
+  name: string
+  lautId?: number
+  url?: string
+  lautUrl?: string
+  image?: string
+  thumb?: string
+}
 
-describe('Test station', () => {
-  it('Should create an new instance', () => {
-    station = new Station('bravefm')
-
-    expect(station).toBeInstanceOf(Station)
-    expect(station.name).toEqual('bravefm')
-  })
-
-  it('Should fetch the whole station', async () => {
-    return await station.fetch().then((data) => {
-      expect(data).toBeTruthy()
-      expect(data).toHaveProperty('displayName')
-      expect(data?.displayName).toEqual('Brave FM')
-      expect(data?.streamUrl).toEqual('https://bravefm.stream.laut.fm/bravefm')
-      expect(data?.pageUrl).toEqual('https://laut.fm/bravefm')
-    })
-  })
-
-  it('Should return the station history', async () => {
-    return await station.getHistory().then(data => {
-      expect(data).toBeTruthy()
-      expect(data).toBeInstanceOf(Array)
-      expect(data).toHaveLength(10)
-    })
-  })
-})
+export interface Track {
+  id: number
+  type: string
+  title: string
+  album: string
+  length: number
+  genre: string
+  releaseyear: number
+  createdAt: Date
+  startedAt: Date
+  endsAt: Date
+  artist: Artist
+}
