@@ -24,3 +24,4 @@
  */
 
 export { Station } from './station/Station'
+export { Track, Playlist, Artist } from './station/interface'

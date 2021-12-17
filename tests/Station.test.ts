@@ -52,4 +52,39 @@ describe('Test station', () => {
       expect(data).toHaveLength(10)
     })
   })
+
+  it('Should return the current track', async () => {
+    return await station.getCurrentTrack().then(data => {
+      expect(data).toBeTruthy()
+    })
+  })
+
+  it('Should return the next 3 artists', async () => {
+    return await station.getNextArtists().then(data => {
+      expect(data).toBeTruthy()
+      expect(data).toBeInstanceOf(Array)
+      expect(data).toHaveLength(3)
+    })
+  })
+
+  it('Should return the number of listeners', async () => {
+    return await station.getListenerCount().then(data => {
+      expect(data).toBeTruthy()
+    })
+  })
+
+  it('Should return all playlists', async () => {
+    return await station.getPlaylists().then(data => {
+      expect(data).toBeTruthy()
+      expect(data).toBeInstanceOf(Array)
+    })
+  })
+
+  it('Should get the schedule', async () => {
+    return await station.getSchedule().then(data => {
+      expect(data).toBeTruthy()
+      expect(data).toBeInstanceOf(Array)
+      expect(data).toHaveLength(7)
+    })
+  })
 })

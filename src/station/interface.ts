@@ -26,15 +26,16 @@
 export interface Playlist {
   id: number
   name: string
-  day: string
-  hour: number
-  endTime: number
+  day?: string
+  hour?: number
+  endTime?: number
   description: string
   color: string
   length: number
   shuffled: boolean
-  startsAt: Date
-  endsAt: Date
+  startsAt?: Date
+  endsAt?: Date
+  airtimes?: Airtime[]
 }
 
 export interface Artist {
@@ -58,4 +59,10 @@ export interface Track {
   startedAt: Date
   endsAt: Date
   artist: Artist
+}
+
+export interface Airtime {
+  day: 'mon' | 'tue' | 'wed' | 'thu' | 'fri' | 'sat' | 'sun'
+  hour: number
+  endTime: number
 }

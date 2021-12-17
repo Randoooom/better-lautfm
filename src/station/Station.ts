@@ -24,7 +24,7 @@
  */
 
 import axiosInstance from '../core/axiosInstance'
-import { Playlist, Track } from './interface'
+import { Artist, Playlist, Track } from './interface'
 import { parseJSON } from '../core/JSONUtil'
 
 export class Station {
@@ -119,7 +119,7 @@ export class Station {
   }
 
   /**
-   * get station history
+   * get last 10 tracks
    */
 
   public async getHistory(): Promise<Track[]> {
@@ -128,7 +128,118 @@ export class Station {
       // handle response
       .then(response => {
         // parse all to tracks
-        return response.data.map((track: Record<string, unknown>) => <Track>parseJSON(track))
+        return response.data.map((track: never) => <Track>parseJSON(track))
       })
+  }
+
+  /**
+   * get current track
+   */
+
+  public async getCurrentTrack(): Promise<Track> {
+    // fetch data
+    return await axiosInstance.get(`/station/${this.name}/current_song`)
+      // handle response
+      .then(response =>
+        // parse track
+        <Track>parseJSON(response.data)
+      )
+  }
+
+  /**
+   * get next 3 artists
+   */
+
+  public async getNextArtists(): Promise<Artist[]> {
+    // fetch data
+    return await axiosInstance.get(`/station/${this.name}/next_artists`)
+      // handle response
+      .then(response => response.data.map((artist: never) => <Artist>parseJSON(artist)))
+  }
+
+  /**
+   * get the count of currently listening people
+   */
+
+  public async getListenerCount(): Promise<number> {
+    // fetch data
+    return await axiosInstance.get(`/station/${this.name}/listeners`)
+      // return data as number
+      .then(response => +response.data)
+  }
+
+  /**
+   * get all playlists with their airtimes
+   */
+
+  public async getPlaylists(): Promise<Playlist[]> {
+    // fetch data
+    return await axiosInstance.get(`/station/${this.name}/playlists`)
+      // build objects
+      .then(response => response.data.map((playlist: never) => <Playlist>parseJSON(playlist)))
+  }
+
+  /**
+   * custom mapping for all airtimes of a day
+   * @param playlist {Playlist}
+   * @param index {number}
+   * @param schedule {Playlist[]} current day schedule needed for LiveShows
+   * @param next {Playlist[]} next day schedule
+   * @private
+   */
+  private handleSpecificScheduleDay(
+    playlist: Playlist,
+    index: number,
+    schedule: Playlist[],
+    next: Playlist[]
+  ) {
+    // handle last item of the airtime (already including rotations)
+    if (index === schedule.length - 1 && next) {
+      next.push({ ...playlist, hour: 0, endTime: playlist.endTime })
+      next.sort((a, b) => a.hour! - b.hour!)
+
+      return {
+        ...playlist,
+        endTime: 24
+      }
+    }
+
+    if (index === 0 && schedule[index + 1])
+      playlist.endTime = schedule[index + 1].hour
+
+    if (playlist.endTime === 0)
+      playlist.endTime = 24
+
+    return playlist
+  }
+
+  /**
+   * return format schedule of station
+   */
+
+  public async getSchedule(): Promise<Playlist[][]> {
+    // init empty array
+    const schedule: Playlist[][] = new Array(7).fill(undefined).map(() => [])
+    // fetch raw data from laut.fm (we will format it better than laut.fm)
+    const rawData = await axiosInstance.get(`/station/${this.name}/schedule`)
+      .then(value => value.data)
+
+    // sort data by day
+    rawData.forEach((raw: never) => {
+      // parse raw data to playlist
+      const playlist: Playlist = <Playlist>parseJSON(raw)
+
+      // translate nam into index
+      const index = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'].indexOf(playlist.day!)
+
+      // push into belonging array
+      schedule[index].push(playlist)
+    })
+
+    // return mapped object
+    return schedule.map((playlists: Playlist[], scheduleIndex: number) => playlists.map((playlist: Playlist, index: number, array: Playlist[]) =>
+      // format and clone airtime
+      this.handleSpecificScheduleDay(playlist, index, array, schedule[scheduleIndex + 1])
+    ))
   }
 }
