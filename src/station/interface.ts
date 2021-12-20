@@ -23,6 +23,22 @@
  * SOFTWARE.
  */
 
+/**
+ * declaration for formatted Playlists
+ * @param id {number} lautFM intern number
+ * @param name {string} name of the playlist
+ * @param day {string?} shortcut of day
+ * @param hour {number?} starting hour of playlist
+ * @param endTime {number?} ending hour of playlist
+ * @param description {string} description of playlist
+ * @param color {string} hex color
+ * @param length {number} length in seconds
+ * @param shuffled {boolean} is playlist shuffled
+ * @param startsAt {Date?} starting timestamp
+ * @param endsAt {Date?} ending timestamp
+ * @param airtimes {Airtime[]?}
+ */
+
 export interface Playlist {
   id: number
   name: string
@@ -38,6 +54,16 @@ export interface Playlist {
   airtimes?: Airtime[]
 }
 
+/**
+ * declaration for formatted artists
+ * @param name {string} name of artist
+ * @param lautId {number?} internal lautFM id
+ * @param url {string?} url to personal page
+ * @param lautUrl {string?} url to lautFM page
+ * @param image {string?} image of artist
+ * @param thumb {string?} thumbnail of artist
+ */
+
 export interface Artist {
   name: string
   lautId?: number
@@ -46,6 +72,21 @@ export interface Artist {
   image?: string
   thumb?: string
 }
+
+/**
+ * declaration of formatted track
+ * @param id {number} internal lautID
+ * @param type {string} type of track (for Example: 'Jingle' or 'Song')
+ * @param title {string}
+ * @param album {string}
+ * @param length {number} length of track in seconds
+ * @param genre {string} genre of track
+ * @param releaseyear {number} year of release
+ * @param createdAt {Date} inserted into playlist timestamp
+ * @param startedAt {Date} start timestamp
+ * @param endsAt {Date} end timestamp
+ * @param artist {Artist}
+ */
 
 export interface Track {
   id: number
@@ -60,6 +101,13 @@ export interface Track {
   endsAt: Date
   artist: Artist
 }
+
+/**
+ * declaration for airtime
+ * @param day {string} day shortcut
+ * @param hour {number} hour of start
+ * @param endTime {number} hour of end
+ */
 
 export interface Airtime {
   day: 'mon' | 'tue' | 'wed' | 'thu' | 'fri' | 'sat' | 'sun'

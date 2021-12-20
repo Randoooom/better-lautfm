@@ -20,9 +20,9 @@ following Features:
 ``npm install --save better-lautfm``
 
 ## Documentation
-Will follow soon
+For detailed explanation visit the [wiki](https://github.com/Randoooom/better-lautfm/wiki)
 
-## Usage
+## Basic usage
 
 Usage is currently only optimized for CommonJS, other builds will follow soon.
 
