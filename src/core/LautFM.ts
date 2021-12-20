@@ -24,10 +24,59 @@
  */
 
 import axiosInstance from './axiosInstance'
+import { Station } from '../station/Station'
+import { filterUndefined } from './JSONUtil'
+
+/**
+ * declaration of status object
+ * @param running {boolean} running state
+ * @param message {string} description of status
+ */
 
 export interface LautFMStatus {
   running: boolean
   message: string
+}
+
+/**
+ * declaration of search options
+ * @param limit {number?} max length of result
+ * @param query {string} the value to search for
+ * @param onlyStationNames {boolean?} toggle station fetch (server side, not our fetch)
+ * @param offset {number?} offset of the results
+ */
+
+export interface LautFMSearchOptions {
+  // default server side should be 10 I guess, but do not really know
+  limit?: number
+  query: string
+  onlyStationNames?: boolean
+  offset?: number
+}
+
+/**
+ * declaration of direct api response
+ * @param categories categories matching query, for further information visit https://api.laut.fm/documentation/search (german documentation)
+ * @param total number of total results in this categories
+ * @param items matching stations / stationNames
+ */
+
+export interface LautFMAPISearchResult {
+  categories: string[]
+  total: number
+  items: Station[] | string[]
+}
+
+/**
+ * declaration of our formatted response
+ * @param result matching stations / stationNames
+ * @param totalCount total matched Stations (not 100% exact because of duplicates)
+ */
+
+export interface LautFMSearchResult {
+  result: Station[] | string[]
+  totalCount: number
+  // we also get things like 'next_offset' but this should not be relevant
 }
 
 export default class LautFM {
@@ -59,5 +108,54 @@ export default class LautFM {
   public static async isServerRunning(): Promise<boolean> {
     return await LautFM.getStatus()
       .then(value => value.running)
+  }
+
+  /**
+   * execute lautFM search query
+   * @param searchOptions {LautFMSearchOptions} the options
+   * @returns {Promise<Station[] | string[]>}
+   */
+
+  public static async searchStations(searchOptions: LautFMSearchOptions): Promise<LautFMSearchResult> {
+    // execute request and collect response
+    // format is really weird (https://api.laut.fm/documentation/search)
+    const response = await axiosInstance.get('/search/stations', {
+      // here we delete all keys standing in relation with undefined value
+      params: filterUndefined({
+        query: searchOptions.query,
+        offset: searchOptions.offset,
+        limit: searchOptions.limit,
+        'just_names': searchOptions.onlyStationNames
+      })
+      // return response data
+    }).then(value => value.data)
+
+    let totalCount = 0
+    const result = response.results.map((result: { total: number, items: Array<unknown> }) => {
+      // increase total count
+      totalCount += result.total
+
+      // map items
+      return result.items.map((value: unknown) => {
+        // return name of it is the name
+        if(typeof value === 'string') return value
+        // return parsed object on station
+        return Station.build(<Record<string, unknown>>(<Record<string, unknown>>value).station)
+      })
+    })
+
+    // transform all stations to top level and return result
+    return {
+      result: result.flat().filter((station: string | Station, index: number, array: Array<Station | string>) => {
+        // build station name
+        const name = typeof station === 'string' ? station : station.name
+
+        // sort duplicates
+        return index === array.findIndex((value) =>
+          (typeof value === 'string' ? value : value.name) === name
+        )
+      }),
+      totalCount
+    }
   }
 }

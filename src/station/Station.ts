@@ -64,6 +64,30 @@ export class Station {
   }
 
   /**
+   * factory for Station
+   * @param options
+   */
+
+  public static build(options: Record<string, unknown>): Station {
+    const station = new Station(<string>options.name)
+
+    station.displayName = <string>options['display_name']
+    station.description = <string>options['description']
+    station.djs = <string>options['djs']
+    station.location = <string>options['location']
+    station.color = <string>options['color']
+    station.updatedAt = new Date(<string>options['updated_at'])
+    station.active = <boolean>options['active']
+    station.position = +<string>options['position']
+    station.genres = <string[]>options['genres']
+
+    station.currentPlaylist = <Playlist>parseJSON(<Record<string, unknown>>options['current_playlist'])
+    station.nextPlaylist = <Playlist>parseJSON(<Record<string, unknown>>options['next_playlist'])
+
+    return station
+  }
+
+  /**
    * fetch the data of the station
    * @throws {Error} station does not exist
    */
@@ -73,24 +97,7 @@ export class Station {
     return await axiosInstance.get(`/station/${this.name}`)
       // handle json response
       .then(response => {
-        /**
-         * update all class values
-         * could be cleaner code
-         */
-        this.displayName = response.data['display_name']
-        this.description = response.data['description']
-        this.djs = response.data['djs']
-        this.location = response.data['location']
-        this.color = response.data['color']
-        this.updatedAt = new Date(response.data['updated_at'])
-        this.active = response.data['active']
-        this.position = response.data['position']
-        this.genres = response.data['genres']
-
-        this.currentPlaylist = <Playlist>parseJSON(response.data['current_playlist'])
-        this.nextPlaylist = <Playlist>parseJSON(response.data['next_playlist'])
-
-        return this
+        return Station.build(response.data)
       })
       // handle error
       .catch((error) => {
@@ -234,9 +241,9 @@ export class Station {
     rawData.forEach((raw: never) => {
       // parse raw data to playlist
       const playlist: Playlist = <Playlist>parseJSON(raw)
-      
+
       // strict null check
-      if(!playlist.day)
+      if (!playlist.day)
         return
 
       // translate nam into index
