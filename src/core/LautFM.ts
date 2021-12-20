@@ -23,10 +23,41 @@
  * SOFTWARE.
  */
 
-import LautFM, { LautFMStatus } from './core/LautFM'
+import axiosInstance from './axiosInstance'
 
-export default LautFM
-export { LautFMStatus }
+export interface LautFMStatus {
+  running: boolean
+  message: string
+}
 
-export { Station } from './station/Station'
-export { Track, Playlist, Artist } from './station/interface'
+export default class LautFM {
+  /**
+   * get current serverTime
+   * @returns {Promise<Date>}
+   */
+
+  public static async getServerTime(): Promise<Date> {
+    return await axiosInstance.get('/time')
+      .then((value) => new Date(value.data))
+  }
+
+  /**
+   * get server status
+   * @returns {Promise<LautFMStatus>}
+   */
+
+  public static async getStatus(): Promise<LautFMStatus> {
+    return await axiosInstance.get('/server_status')
+      .then(value => value.data)
+  }
+
+  /**
+   * get running state of api
+   * @returns {Promise<boolean>}
+   */
+
+  public static async isServerRunning(): Promise<boolean> {
+    return await LautFM.getStatus()
+      .then(value => value.running)
+  }
+}

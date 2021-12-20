@@ -23,10 +23,30 @@
  * SOFTWARE.
  */
 
-import LautFM, { LautFMStatus } from './core/LautFM'
+import LautFM from '../lib'
 
-export default LautFM
-export { LautFMStatus }
+describe('Test LautFM server hooks', () => {
+  it('Should get the server time', async () => {
+    return await LautFM.getServerTime()
+      .then(date => {
+        expect(date).toBeTruthy()
+        expect(date).toBeInstanceOf(Date)
+      })
+  })
 
-export { Station } from './station/Station'
-export { Track, Playlist, Artist } from './station/interface'
+  it('Should get the server status', async () => {
+    return await LautFM.getStatus()
+      .then(status => {
+        expect(status).toBeTruthy()
+        expect(status).toHaveProperty('running')
+        expect(status).toHaveProperty('message')
+      })
+  })
+
+  it('Should get running state from server', async() => {
+    return await LautFM.isServerRunning()
+      .then(state => {
+        expect(state).toBeDefined()
+      })
+  })
+})
