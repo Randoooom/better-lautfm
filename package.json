@@ -1,6 +1,6 @@
 {
   "name": "better-lautfm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node wrapper with Typescript definitions for LautFM (much better than the others in this list)",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
