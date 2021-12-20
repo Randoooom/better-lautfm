@@ -11,9 +11,9 @@
 This is a lightweight, object orientated and small wrapper for the public [LautFM-API](https://api.laut.fm). With
 following Features:
 
-- types for nearly everything (more will be added soon)
-- nearly full station coverage
-- coverage for basic lautFM requests (status and so on)
+-   types for nearly everything (more will be added soon)
+-   nearly full station coverage
+-   coverage for basic lautFM requests (status and so on)
 
 ## Installation
 
