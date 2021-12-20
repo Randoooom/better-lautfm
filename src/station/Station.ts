@@ -71,6 +71,7 @@ export class Station {
   public static build(options: Record<string, unknown>): Station {
     const station = new Station(<string>options.name)
 
+    // TODO: make the parsing cleaner
     station.displayName = <string>options['display_name']
     station.description = <string>options['description']
     station.djs = <string>options['djs']
