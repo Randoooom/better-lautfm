@@ -27,7 +27,7 @@ export interface StringIndex {
   [key: string | number]: unknown
 }
 
-export const parseJSON = (source: Record<string, unknown>) => {
+export const parseJSON = (source: Record<string, unknown>): unknown => {
   // index new object
   const value: StringIndex = {}
 
