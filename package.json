@@ -1,7 +1,7 @@
 {
   "name": "better-lautfm",
   "version": "1.0.0",
-  "description": "",
+  "description": "Node wrapper with Typescript definitions for LautFM (much better than the others in this list)",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -19,6 +19,7 @@
   },
   "author": "Randoooom",
   "license": "MIT",
+  "keywords": ["lautfm", "webradio", "typescript", "wrapper", "api"],
   "bugs": {
     "url": "https://github.com/Randoooom/better-lautfm/issues"
   },
