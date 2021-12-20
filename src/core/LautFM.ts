@@ -113,7 +113,7 @@ export default class LautFM {
   /**
    * execute lautFM search query
    * @param searchOptions {LautFMSearchOptions} the options
-   * @returns {Promise<Station[] | string[]>}
+   * @returns {Promise<LautFMSearchResult>}
    */
 
   public static async searchStations(searchOptions: LautFMSearchOptions): Promise<LautFMSearchResult> {
