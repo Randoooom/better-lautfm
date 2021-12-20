@@ -196,7 +196,13 @@ export class Station {
     // handle last item of the airtime (already including rotations)
     if (index === schedule.length - 1 && next) {
       next.push({ ...playlist, hour: 0, endTime: playlist.endTime })
-      next.sort((a, b) => a.hour! - b.hour!)
+      next.sort((a, b) => {
+        // strict null check, should always be false
+        if (!a.hour || !b.hour)
+          return 0
+
+        return a.hour - b.hour
+      })
 
       return {
         ...playlist,
@@ -228,9 +234,13 @@ export class Station {
     rawData.forEach((raw: never) => {
       // parse raw data to playlist
       const playlist: Playlist = <Playlist>parseJSON(raw)
+      
+      // strict null check
+      if(!playlist.day)
+        return
 
       // translate nam into index
-      const index = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'].indexOf(playlist.day!)
+      const index = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'].indexOf(playlist.day)
 
       // push into belonging array
       schedule[index].push(playlist)
