@@ -85,7 +85,7 @@ constructor for the station
 
 ##### Defined in
 
-[station/Station.ts:62](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L62)
+[station/Station.ts:62](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L62)
 
 ### Properties
 
@@ -95,7 +95,7 @@ constructor for the station
 
 ##### Defined in
 
-[station/Station.ts:46](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L46)
+[station/Station.ts:46](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L46)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 ##### Defined in
 
-[station/Station.ts:42](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L42)
+[station/Station.ts:42](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L42)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 ##### Defined in
 
-[station/Station.ts:53](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L53)
+[station/Station.ts:53](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L53)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 ##### Defined in
 
-[station/Station.ts:36](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L36)
+[station/Station.ts:36](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L36)
 
 ___
 
@@ -135,7 +135,7 @@ ___
 
 ##### Defined in
 
-[station/Station.ts:34](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L34)
+[station/Station.ts:34](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L34)
 
 ___
 
@@ -145,7 +145,7 @@ ___
 
 ##### Defined in
 
-[station/Station.ts:38](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L38)
+[station/Station.ts:38](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L38)
 
 ___
 
@@ -155,7 +155,7 @@ ___
 
 ##### Defined in
 
-[station/Station.ts:50](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L50)
+[station/Station.ts:50](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L50)
 
 ___
 
@@ -165,7 +165,7 @@ ___
 
 ##### Defined in
 
-[station/Station.ts:40](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L40)
+[station/Station.ts:40](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L40)
 
 ___
 
@@ -175,7 +175,7 @@ ___
 
 ##### Defined in
 
-[station/Station.ts:32](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L32)
+[station/Station.ts:32](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L32)
 
 ___
 
@@ -185,7 +185,7 @@ ___
 
 ##### Defined in
 
-[station/Station.ts:55](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L55)
+[station/Station.ts:55](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L55)
 
 ___
 
@@ -195,7 +195,7 @@ ___
 
 ##### Defined in
 
-[station/Station.ts:48](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L48)
+[station/Station.ts:48](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L48)
 
 ___
 
@@ -205,7 +205,7 @@ ___
 
 ##### Defined in
 
-[station/Station.ts:44](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L44)
+[station/Station.ts:44](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L44)
 
 ### Accessors
 
@@ -221,7 +221,7 @@ get station page url
 
 ##### Defined in
 
-[station/Station.ts:117](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L117)
+[station/Station.ts:117](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L117)
 
 ___
 
@@ -237,7 +237,7 @@ get station stream url (including subdomain)
 
 ##### Defined in
 
-[station/Station.ts:125](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L125)
+[station/Station.ts:125](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L125)
 
 ### Methods
 
@@ -255,7 +255,7 @@ fetch the data of the station
 
 ##### Defined in
 
-[station/Station.ts:96](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L96)
+[station/Station.ts:96](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L96)
 
 ___
 
@@ -271,7 +271,7 @@ get current track
 
 ##### Defined in
 
-[station/Station.ts:147](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L147)
+[station/Station.ts:147](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L147)
 
 ___
 
@@ -287,7 +287,7 @@ get last 10 tracks
 
 ##### Defined in
 
-[station/Station.ts:133](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L133)
+[station/Station.ts:133](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L133)
 
 ___
 
@@ -303,7 +303,7 @@ get the count of currently listening people
 
 ##### Defined in
 
-[station/Station.ts:172](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L172)
+[station/Station.ts:172](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L172)
 
 ___
 
@@ -319,7 +319,7 @@ get next 3 artists
 
 ##### Defined in
 
-[station/Station.ts:161](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L161)
+[station/Station.ts:161](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L161)
 
 ___
 
@@ -335,7 +335,7 @@ get all playlists with their airtimes
 
 ##### Defined in
 
-[station/Station.ts:183](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L183)
+[station/Station.ts:183](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L183)
 
 ___
 
@@ -351,7 +351,7 @@ return format schedule of station
 
 ##### Defined in
 
-[station/Station.ts:234](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L234)
+[station/Station.ts:234](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L234)
 
 ___
 
@@ -373,7 +373,7 @@ factory for Station
 
 ##### Defined in
 
-[station/Station.ts:71](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/Station.ts#L71)
+[station/Station.ts:71](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/Station.ts#L71)
 
 
 <a name="classesdefaultmd"></a>
@@ -415,7 +415,7 @@ get current serverTime
 
 ##### Defined in
 
-[core/LautFM.ts:88](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/core/LautFM.ts#L88)
+[core/LautFM.ts:88](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/core/LautFM.ts#L88)
 
 ___
 
@@ -431,7 +431,7 @@ get server status
 
 ##### Defined in
 
-[core/LautFM.ts:98](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/core/LautFM.ts#L98)
+[core/LautFM.ts:98](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/core/LautFM.ts#L98)
 
 ___
 
@@ -447,7 +447,7 @@ get running state of api
 
 ##### Defined in
 
-[core/LautFM.ts:108](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/core/LautFM.ts#L108)
+[core/LautFM.ts:108](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/core/LautFM.ts#L108)
 
 ___
 
@@ -469,7 +469,7 @@ execute lautFM search query
 
 ##### Defined in
 
-[core/LautFM.ts:119](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/core/LautFM.ts#L119)
+[core/LautFM.ts:119](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/core/LautFM.ts#L119)
 
 # Interfaces
 
@@ -504,7 +504,7 @@ declaration for airtime
 
 ##### Defined in
 
-[station/interface.ts:113](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L113)
+[station/interface.ts:113](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L113)
 
 ___
 
@@ -514,7 +514,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:115](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L115)
+[station/interface.ts:115](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L115)
 
 ___
 
@@ -524,7 +524,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:114](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L114)
+[station/interface.ts:114](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L114)
 
 
 <a name="interfacesartistmd"></a>
@@ -566,7 +566,7 @@ declaration for formatted artists
 
 ##### Defined in
 
-[station/interface.ts:72](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L72)
+[station/interface.ts:72](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L72)
 
 ___
 
@@ -576,7 +576,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:69](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L69)
+[station/interface.ts:69](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L69)
 
 ___
 
@@ -586,7 +586,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:71](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L71)
+[station/interface.ts:71](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L71)
 
 ___
 
@@ -596,7 +596,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:68](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L68)
+[station/interface.ts:68](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L68)
 
 ___
 
@@ -606,7 +606,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:73](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L73)
+[station/interface.ts:73](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L73)
 
 ___
 
@@ -616,7 +616,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:70](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L70)
+[station/interface.ts:70](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L70)
 
 
 <a name="interfaceslautfmapisearchresultmd"></a>
@@ -649,7 +649,7 @@ declaration of direct api response
 
 ##### Defined in
 
-[core/LautFM.ts:65](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/core/LautFM.ts#L65)
+[core/LautFM.ts:65](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/core/LautFM.ts#L65)
 
 ___
 
@@ -659,7 +659,7 @@ ___
 
 ##### Defined in
 
-[core/LautFM.ts:67](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/core/LautFM.ts#L67)
+[core/LautFM.ts:67](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/core/LautFM.ts#L67)
 
 ___
 
@@ -669,7 +669,7 @@ ___
 
 ##### Defined in
 
-[core/LautFM.ts:66](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/core/LautFM.ts#L66)
+[core/LautFM.ts:66](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/core/LautFM.ts#L66)
 
 
 <a name="interfaceslautfmsearchoptionsmd"></a>
@@ -705,7 +705,7 @@ declaration of search options
 
 ##### Defined in
 
-[core/LautFM.ts:51](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/core/LautFM.ts#L51)
+[core/LautFM.ts:51](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/core/LautFM.ts#L51)
 
 ___
 
@@ -715,7 +715,7 @@ ___
 
 ##### Defined in
 
-[core/LautFM.ts:54](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/core/LautFM.ts#L54)
+[core/LautFM.ts:54](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/core/LautFM.ts#L54)
 
 ___
 
@@ -725,7 +725,7 @@ ___
 
 ##### Defined in
 
-[core/LautFM.ts:53](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/core/LautFM.ts#L53)
+[core/LautFM.ts:53](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/core/LautFM.ts#L53)
 
 ___
 
@@ -735,7 +735,7 @@ ___
 
 ##### Defined in
 
-[core/LautFM.ts:52](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/core/LautFM.ts#L52)
+[core/LautFM.ts:52](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/core/LautFM.ts#L52)
 
 
 <a name="interfaceslautfmsearchresultmd"></a>
@@ -765,7 +765,7 @@ declaration of our formatted response
 
 ##### Defined in
 
-[core/LautFM.ts:77](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/core/LautFM.ts#L77)
+[core/LautFM.ts:77](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/core/LautFM.ts#L77)
 
 ___
 
@@ -775,7 +775,7 @@ ___
 
 ##### Defined in
 
-[core/LautFM.ts:78](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/core/LautFM.ts#L78)
+[core/LautFM.ts:78](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/core/LautFM.ts#L78)
 
 
 <a name="interfaceslautfmstatusmd"></a>
@@ -805,7 +805,7 @@ declaration of status object
 
 ##### Defined in
 
-[core/LautFM.ts:38](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/core/LautFM.ts#L38)
+[core/LautFM.ts:38](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/core/LautFM.ts#L38)
 
 ___
 
@@ -815,7 +815,7 @@ ___
 
 ##### Defined in
 
-[core/LautFM.ts:37](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/core/LautFM.ts#L37)
+[core/LautFM.ts:37](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/core/LautFM.ts#L37)
 
 
 <a name="interfacesplaylistmd"></a>
@@ -875,7 +875,7 @@ declaration for formatted Playlists
 
 ##### Defined in
 
-[station/interface.ts:54](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L54)
+[station/interface.ts:54](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L54)
 
 ___
 
@@ -885,7 +885,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:49](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L49)
+[station/interface.ts:49](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L49)
 
 ___
 
@@ -895,7 +895,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:45](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L45)
+[station/interface.ts:45](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L45)
 
 ___
 
@@ -905,7 +905,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:48](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L48)
+[station/interface.ts:48](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L48)
 
 ___
 
@@ -915,7 +915,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:47](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L47)
+[station/interface.ts:47](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L47)
 
 ___
 
@@ -925,7 +925,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:53](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L53)
+[station/interface.ts:53](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L53)
 
 ___
 
@@ -935,7 +935,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:46](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L46)
+[station/interface.ts:46](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L46)
 
 ___
 
@@ -945,7 +945,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:43](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L43)
+[station/interface.ts:43](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L43)
 
 ___
 
@@ -955,7 +955,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:50](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L50)
+[station/interface.ts:50](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L50)
 
 ___
 
@@ -965,7 +965,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:44](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L44)
+[station/interface.ts:44](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L44)
 
 ___
 
@@ -975,7 +975,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:51](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L51)
+[station/interface.ts:51](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L51)
 
 ___
 
@@ -985,7 +985,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:52](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L52)
+[station/interface.ts:52](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L52)
 
 
 <a name="interfacestrackmd"></a>
@@ -1042,7 +1042,7 @@ declaration of formatted track
 
 ##### Defined in
 
-[station/interface.ts:95](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L95)
+[station/interface.ts:95](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L95)
 
 ___
 
@@ -1052,7 +1052,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:102](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L102)
+[station/interface.ts:102](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L102)
 
 ___
 
@@ -1062,7 +1062,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:99](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L99)
+[station/interface.ts:99](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L99)
 
 ___
 
@@ -1072,7 +1072,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:101](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L101)
+[station/interface.ts:101](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L101)
 
 ___
 
@@ -1082,7 +1082,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:97](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L97)
+[station/interface.ts:97](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L97)
 
 ___
 
@@ -1092,7 +1092,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:92](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L92)
+[station/interface.ts:92](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L92)
 
 ___
 
@@ -1102,7 +1102,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:96](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L96)
+[station/interface.ts:96](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L96)
 
 ___
 
@@ -1112,7 +1112,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:98](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L98)
+[station/interface.ts:98](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L98)
 
 ___
 
@@ -1122,7 +1122,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:100](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L100)
+[station/interface.ts:100](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L100)
 
 ___
 
@@ -1132,7 +1132,7 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:94](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L94)
+[station/interface.ts:94](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L94)
 
 ___
 
@@ -1142,4 +1142,4 @@ ___
 
 ##### Defined in
 
-[station/interface.ts:93](https://github.com/Randoooom/better-lautfm/blob/6cee1e7/src/station/interface.ts#L93)
+[station/interface.ts:93](https://github.com/Randoooom/better-lautfm/blob/47811b0/src/station/interface.ts#L93)
