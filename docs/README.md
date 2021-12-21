@@ -1,3 +1,5 @@
+better-lautfm / [Exports](modules.md)
+
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/eca001c7b1814436ac2a7f939d5e3ea7)](https://www.codacy.com/gh/Randoooom/better-lautfm/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Randoooom/better-lautfm&amp;utm_campaign=Badge_Grade)
 [![npm](https://img.shields.io/npm/v/better-lautfm)](https://www.npmjs.com/package/better-lautfm)
 ![NPM](https://img.shields.io/npm/l/better-lautfm)
@@ -20,7 +22,7 @@ following Features:
 ``npm install --save better-lautfm``
 
 ## Documentation
-For detailed explanation visit the [wiki](https://github.com/Randoooom/better-lautfm/tree/dev/docs/modules.md)
+For detailed explanation visit the [wiki](https://github.com/Randoooom/better-lautfm/wiki)
 
 ## Basic usage
 
