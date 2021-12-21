@@ -20,7 +20,7 @@ following Features:
 ``npm install --save better-lautfm``
 
 ## Documentation
-For detailed explanation visit the [wiki](https://github.com/Randoooom/better-lautfm/tree/dev/docs/modules.md)
+For detailed explanation click [here](https://github.com/Randoooom/better-lautfm/tree/dev/API.md)
 
 ## Basic usage
 
