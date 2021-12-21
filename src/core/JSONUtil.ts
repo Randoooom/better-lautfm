@@ -50,7 +50,18 @@ export const parseJSON = (source: Record<string, unknown>): unknown => {
     value[replaced] = source[key]
   })
 
-
-
+  // return the resulting value
   return <unknown>value
+}
+
+export const filterUndefined = (source: Record<string, unknown>): unknown => {
+  // iterate all keys
+  Object.keys(source).forEach(key => {
+    // delete keys on undefined
+    if(source[key] === undefined)
+      delete source[key]
+  })
+
+  // return updated object
+  return source
 }

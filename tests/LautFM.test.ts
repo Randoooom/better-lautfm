@@ -23,7 +23,7 @@
  * SOFTWARE.
  */
 
-import LautFM from '../lib'
+import LautFM, { Station } from '../lib'
 
 describe('Test LautFM server hooks', () => {
   it('Should get the server time', async () => {
@@ -43,10 +43,46 @@ describe('Test LautFM server hooks', () => {
       })
   })
 
-  it('Should get running state from server', async() => {
+  it('Should get running state from server', async () => {
     return await LautFM.isServerRunning()
       .then(state => {
         expect(state).toBeDefined()
+      })
+  })
+})
+
+describe('Search queries', () => {
+  it('Should search for bravefm and return a string', async () => {
+    return await LautFM.searchStations({ query: 'bravefm', onlyStationNames: true })
+      .then(value => {
+        expect(value).toHaveProperty('totalCount')
+        expect(value).toHaveProperty('result')
+        expect(value.result).toBeInstanceOf(Array)
+
+        value.result.forEach(item => expect(typeof item).toBe('string'))
+      })
+  })
+
+  it('Should search for bravefm and return a station', async() => {
+    return await LautFM.searchStations({ query: 'bravefm' })
+      .then(value => {
+        expect(value).toHaveProperty('totalCount')
+        expect(value).toHaveProperty('result')
+        expect(value.result).toBeInstanceOf(Array)
+
+        value.result.forEach(item => expect(item).toBeInstanceOf(Station))
+      })
+  })
+
+  it('Should search for Queen and get max 10 results', async () => {
+    return await LautFM.searchStations({ query: 'Queen', limit: 10 })
+      .then(value => {
+        expect(value).toHaveProperty('totalCount')
+        expect(value).toHaveProperty('result')
+        expect(value.result).toBeInstanceOf(Array)
+        expect(value.result.length).toBeLessThanOrEqual(10)
+
+        value.result.forEach(item => expect(item).toBeInstanceOf(Station))
       })
   })
 })

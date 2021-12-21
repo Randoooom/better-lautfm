@@ -23,10 +23,10 @@
  * SOFTWARE.
  */
 
-import LautFM, { LautFMStatus } from './core/LautFM'
+import LautFM, { LautFMStatus, LautFMSearchResult, LautFMAPISearchResult, LautFMSearchOptions } from './core/LautFM'
 
 export default LautFM
-export { LautFMStatus }
+export { LautFMStatus, LautFMSearchResult, LautFMAPISearchResult, LautFMSearchOptions }
 
 export { Station } from './station/Station'
-export { Track, Playlist, Artist } from './station/interface'
+export { Track, Playlist, Artist, Airtime } from './station/interface'
