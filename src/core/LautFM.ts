@@ -82,13 +82,18 @@ export interface LautFMSearchResult {
 /**
  * genre like we get it from /genres
  */
-export interface LautFMGenre  {
+export interface LautFMGenre {
   /** name of the genre */
   name: string,
   /** score of the genre */
   score: number,
   /**  list of related genre names */
   related: string[]
+}
+
+export interface LautFMListeners {
+  /**  listeners of specific station */
+  [key: string]: number
 }
 
 export default class LautFM {
@@ -150,7 +155,7 @@ export default class LautFM {
       // map items
       return result.items.map((value: unknown) => {
         // return name of it is the name
-        if(typeof value === 'string') return value
+        if (typeof value === 'string') return value
         // return parsed object on station
         return Station.build(<Record<string, unknown>>(<Record<string, unknown>>value).station)
       })
@@ -186,6 +191,34 @@ export default class LautFM {
 
   public static async getAvailableGenres(): Promise<LautFMGenre[]> {
     return await axiosInstance.get('/genres')
+      .then(value => value.data)
+  }
+
+  /**
+   * get a list of all known names of stations
+   */
+
+  public static async getAllStationNames(): Promise<string[]> {
+    return await axiosInstance.get('/station_names')
+      .then(value => value.data)
+  }
+
+  /**
+   * get all live stations at the moment
+   */
+
+  public static async getAllLiveStations(): Promise<Station[]> {
+    return await axiosInstance.get('/stations/live')
+      // parse stations
+      .then(value => value.data.map((raw: Record<string, unknown>) => Station.build(raw)))
+  }
+
+  /**
+   * get all listeners from all stations
+   */
+
+  public static async getListeners(): Promise<LautFMListeners> {
+    return await axiosInstance.get('/listeners')
       .then(value => value.data)
   }
 }
