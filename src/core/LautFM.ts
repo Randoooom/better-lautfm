@@ -158,4 +158,13 @@ export default class LautFM {
       totalCount
     }
   }
+
+  /**
+   * get all aviable starting letters of station
+   */
+
+  public static async getStartingLetters(): Promise<string[]> {
+    return await axiosInstance.get('/letters')
+      .then(value => value.data)
+  }
 }
