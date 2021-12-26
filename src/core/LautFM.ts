@@ -79,6 +79,18 @@ export interface LautFMSearchResult {
   // we also get things like 'next_offset' but this should not be relevant
 }
 
+/**
+ * genre like we get it from /genres
+ */
+export interface LautFMGenre  {
+  /** name of the genre */
+  name: string,
+  /** score of the genre */
+  score: number,
+  /**  list of related genre names */
+  related: string[]
+}
+
 export default class LautFM {
   /**
    * get current serverTime
@@ -160,11 +172,20 @@ export default class LautFM {
   }
 
   /**
-   * get all aviable starting letters of station
+   * get all available starting letters of station
    */
 
   public static async getStartingLetters(): Promise<string[]> {
     return await axiosInstance.get('/letters')
+      .then(value => value.data)
+  }
+
+  /**
+   * get a list of all known genres
+   */
+
+  public static async getAvailableGenres(): Promise<LautFMGenre[]> {
+    return await axiosInstance.get('/genres')
       .then(value => value.data)
   }
 }
