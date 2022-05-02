@@ -2,7 +2,6 @@
 [![npm](https://img.shields.io/npm/v/better-lautfm)](https://www.npmjs.com/package/better-lautfm)
 ![NPM](https://img.shields.io/npm/l/better-lautfm)
 ![npm](https://img.shields.io/npm/dt/better-lautfm)
-![cd](https://build.randoms.rocks/app/rest/builds/buildType:(id:BetterLautfm_Publish)/statusIcon)
 
 # Better-LautFM
 
